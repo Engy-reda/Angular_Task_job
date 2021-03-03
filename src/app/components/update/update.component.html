@@ -1,0 +1,195 @@
+<!-- <div class="row">
+  <div class="col-lg-2 col-md-2 col-sm-2 col-4"></div>
+  <div class="col-lg-8 col-md-8 col-sm-8 col-4">
+      <br><br>
+      <form action="" class="form-border" (ngSubmit)="AddData()">
+          <div class="form-group">
+            <label for="inputsmm">company Name</label>
+            <input class="form-control input-sm"
+            formControlName="companyName"
+            [ngClass]="{'form-control':true ,
+            'is-invalid':!companyName.valid && companyName.touched,
+           'is-valid':companyName.valid}"
+           id="inputsmm" type="text" >
+           <small *ngIf="companyName.errors?.required && companyName.touched" class="form-text custom-invalid-feedback first">field is required</small>
+           <small *ngIf="companyName.errors?.maxLength && companyName.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 25 chracter</small>
+          </div>
+           <div class="form-group">
+            <label for="inputdefaultt">address</label>
+            <input class="form-control"
+            formControlName="address"
+            [ngClass]="{'form-control':true ,
+            'is-invalid':!address.valid && address.touched,
+           'is-valid':address.valid}"
+           id="inputsmm" type="text" >
+           <small *ngIf="address.errors?.required && address.touched" class="form-text custom-invalid-feedback first">field is required</small>
+           <small *ngIf="address.errors?.maxLength && address.touched" class="form-text custom-invalid-feedback first">field is required</small>
+          </div>
+          <div class="form-group">
+            <label for="inputlgg">email</label>
+            <input class="form-control input-lg" 
+            formControlName="email"
+            [ngClass]="{'form-control':true ,
+            'is-invalid':!email.valid && email.touched,
+           'is-valid':email.valid}"
+           id="inputsmm" type="email" >
+           <small *ngIf="email.errors?.required && email.touched" class="form-text custom-invalid-feedback first">field is required</small>
+           <small *ngIf="email.errors?.maxLength && email.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 100 chracter</small>
+          </div>
+          <div class="form-group">
+              <label for="inputlgm">phoneNumber</label>
+              <input class="form-control input-lg" 
+              formControlName="phoneNumber"
+              [ngClass]="{'form-control':true ,
+              'is-invalid':!phoneNumber.valid && phoneNumber.touched,
+             'is-valid':phoneNumber.valid}"
+              id="inputlgs" type="number" >
+             <small *ngIf="phoneNumber.errors?.required && phoneNumber.touched" class="form-text custom-invalid-feedback first">field is required</small>
+             <small *ngIf="phoneNumber.errors?.pattern && phoneNumber.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 15 number</small>
+
+            </div>
+            <label for="inputlgk">Employe</label>
+            <div class="row" formGroupName="empInfo">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label for="inputlgi">employe Name</label>
+                      <input class="form-control input-lg" 
+                      formControlName="empName"
+                      [ngClass]="{'form-control':true ,
+                      'is-invalid':!empName.valid && empName.touched,
+                     'is-valid':empName.valid}"
+                      id="inputlgl"
+                     id="inputlgi" type="text" >
+                     <small *ngIf="empName.errors?.required && empName.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                     <small *ngIf="empName.errors?.pattern && empName.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 25 chracter</small>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="inputlgl">designation</label>
+                      <select class="form-control"
+                      formControlName="designation"
+                       id="inputlgl">
+                       <option selected></option>
+                       <option *ngFor="let item of Designate" [value]="item">{{item}}</option>
+                      
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputlgf">joinDate</label>
+                      <input class="form-control input-lg"
+                      formControlName="joinDate"
+                      [ngClass]="{'form-control':true ,
+                      'is-invalid':!joinDate.valid && joinDate.touched,
+                     'is-valid':joinDate.valid}"
+                      id="inputlgl"
+                     id="inputlgi" type="date" >
+                     <small *ngIf="joinDate.errors?.required && joinDate.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                     <small *ngIf="joinDate.errors?.maxLength && joinDate.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 25 chracter</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputlgc">email</label>
+                      <input class="form-control input-lg" 
+                      formControlName="email1"
+                      [ngClass]="{'form-control':true ,
+                      'is-invalid':!email1.valid && email1.touched,
+                     'is-valid':email1.valid}"
+                     id="inputsmm" type="email" >
+                     <small *ngIf="email1.errors?.required && email1.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                     <small *ngIf="email1.errors?.maxLength && email1.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 100 chracter</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputlgs">phoneNumber</label>
+                      <input class="form-control input-lg" 
+                      formControlName="phoneNumber1"
+                      [ngClass]="{'form-control':true ,
+                      'is-invalid':!phoneNumber1.valid && phoneNumber1.touched,
+                     'is-valid':phoneNumber1.valid}"
+                      id="inputlgs" type="number">
+                     <small *ngIf="phoneNumber1.errors?.required && phoneNumber1.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                     <small *ngIf="phoneNumber1.errors?.pattern && phoneNumber1.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 15 number</small>
+
+                    </div>
+                    <label for="inputlg">skillInfo</label>
+                    <div formGroupName="skillInfo">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="inputlgd">skillName</label>
+                            <select class="form-control"
+                               formControlName="skillName"
+                                id="inputlgd">
+                               <option selected></option>
+                               <option *ngFor="let item of skillNameInfo" [value]="item">{{item}}</option>
+                      
+                            </select>
+                          </div>
+                     
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="inputlgz">skillRating</label>
+                            <input class="form-control input-lg" 
+                            formControlName="skillRating"
+                            [ngClass]="{'form-control':true ,
+                            'is-invalid':!skillRating.valid && skillRating.touched,
+                           'is-valid':skillRating.valid}"
+                            id="inputlgs" type="number">
+                           <small *ngIf="skillRating.errors?.required && skillRating.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                           <small *ngIf="skillRating.errors?.maxLength && skillRating.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 15 number</small>
+      
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                    <label for="inputlg">eductionInfo</label>
+                    <div formGroupName="eductionInfo" >
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label for="inputlgt">instituteName</label>
+                            <input class="form-control input-lg"
+                            formControlName="instituteName"
+                            [ngClass]="{'form-control':true ,
+                            'is-invalid':!instituteName.valid && instituteName.touched,
+                           'is-valid':instituteName.valid}"
+                            id="inputlgs" type="number">
+                           <small *ngIf="instituteName.errors?.required && instituteName.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                           <small *ngIf="instituteName.errors?.maxLength && instituteName.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 500 number</small>
+      
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label for="inputlgy">courseName</label>
+                            <input class="form-control input-lg"
+                            formControlName="courseName"
+                            [ngClass]="{'form-control':true ,
+                            'is-invalid':!courseName.valid && courseName.touched,
+                           'is-valid':courseName.valid}"
+                            id="inputlgs" type="number">
+                           <small *ngIf="courseName.errors?.required && courseName.touched" class="form-text custom-invalid-feedback first">field is required</small>
+                           <small *ngIf="courseName.errors?.maxLength && courseName.touched" class="form-text custom-invalid-feedback first">field must be less than or equall 25 number</small>
+      
+                          </div>
+                          </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label for="inputlge">completedYear</label>
+                            <input class="form-control input-lg"
+                            formControlName="completedYear"
+                             id="inputlge" type="date">
+                          </div>    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <button type="submit" class="form-control">Add</button>
+        </form>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2 col-4"></div>
+</div> -->

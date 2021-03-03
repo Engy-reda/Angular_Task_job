@@ -1,0 +1,138 @@
+<!-- // https://material.angular.io/assets/img/homepage/angular-white-transparent.svg
+//https://material.angular.io/assets/img/angular-material-logo.svg
+//https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg 
+data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojRkZGRkZGO30NCgkuc3Qxe29wYWNpdHk6MC45O30NCjwvc3R5bGU+DQo8Zz4NCgk8Zz4NCgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxMjUsMTUzLjQgMTAwLjMsMTUzLjQgODguNiwxODIuNiA4OC42LDE4Mi42IDY2LjksMTgyLjYgNjYuOCwxODIuNiAxMjUsNTIuMSAxMjUsNTIuMiAxMjUsNTIuMiANCgkJCTEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwxNTMuNCAJCSIvPg0KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjEwOCwxMzUuNCAxMjUsMTM1LjQgMTI1LDEzNS40IDEyNSw5NC41IAkJIi8+DQoJPC9nPg0KCTxnIGNsYXNzPSJzdDEiPg0KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjEyNSwxNTMuNCAxNDkuNywxNTMuNCAxNjEuNCwxODIuNiAxNjEuNCwxODIuNiAxODMuMSwxODIuNiAxODMuMiwxODIuNiAxMjUsNTIuMSAxMjUsNTIuMiAxMjUsNTIuMiANCgkJCTEyNSwzMCAxMjUsMzAgMjE4LjEsNjMuMiAyMDMuOSwxODYuMyAxMjUsMjMwIDEyNSwyMzAgMTI1LDE1My40IAkJIi8+DQoJCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTQyLDEzNS40IDEyNSwxMzUuNCAxMjUsMTM1LjQgMTI1LDk0LjUgCQkiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==-->
+
+<header class="nav-shadow">
+    <nav class="nav-bar" class="sticky-nav" ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
+        <label class="logo">
+            <span>
+               <img src="https://material.angular.io/assets/img/homepage/angular-white-transparent.svg" width="50px"/>
+             </span>
+             <span>Material</span>
+        </label>
+        <ul>
+            <li><a href="#" class="nav-par "></a></li>
+            <li><a href="#" class="nav-par"></a></li>
+            <li><a href="#" class="nav-par"></a></li>
+            <li><a href="#" class="nav-par"></a></li>
+            <li><a href="#"><img src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg" width="30px"><span class="nav-par">GitHub</span></a></li>
+        </ul>
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <div class="hhh-div"></div>
+
+</header>
+
+
+<section> 
+            <div class="form-border" >
+                <h1>Angular Material</h1>
+                <p>Material Design Company Components for Angular</p>
+                <input type="text" [(ngModel)]="firstname"  class="inputText"  id="ex1" placeholder="Search" (input)="search()" />
+                 {{firstname}}
+              </div>
+</section>
+<div class="row"  [formGroup]="nestedForm" >
+    <div class="col-sm-3">
+        </div>
+    <div class="col-sm-3">
+        <label for="inputlgl">Companys</label>
+    <select class="form-control"  (input)="select()"
+     id="inputlgl" >
+     <option selected></option>
+     <option *ngFor="let item of listCompanys" [value]="item.companyName" >{{item.companyName}}</option>
+    </select>
+  </div>
+    <div class="col-sm-3">
+        <button routerLink="/inputForm" class="addBtn">Add Company</button>
+    </div>
+    <div class="col-sm-3">
+    </div>
+</div>
+<div class="form-group">
+    
+<!-- <div class="display">
+    <div class="row">
+        <div *ngFor="let item of listCompanys | paginate: {
+            itemsPerPage: 5,
+            currentPage: page,
+            totalItems: totalLength }" class="col-md-5  container border  ">
+            <div class="card  text-center">
+                <div class="card-name">
+                    <h4 alt="Avatar" style="width:100%"><b>{{item.companyName}}</b></h4> 
+                </div>
+                <h6 class="card-info">{{item.address}}</h6> 
+                <h6 class="card-info">{{item.email}}</h6> 
+                <h6 class="card-info">{{item.phoneNumber}}</h6> 
+            </div>
+      </div>
+    </div>
+    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+</div> -->
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <table class="table">
+            <thead>
+                <tr class="bg-dark text-light">
+                    <th scope="col">company Name</th>
+                    <th scope="col">address</th>
+                    <th scope="col">email</th>
+                    <th scope="col">phoneNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listCompanys | paginate: {
+                    itemsPerPage: 5,
+                    currentPage: page,
+                    totalItems: totalLength }">
+                    <td>{{item.companyName}}</td>
+                    <td>{{item.address}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phoneNumber}}</td>
+                    <td><button class="btn btn-success" (click)="deletRow(item.id)">Delete</button></td>
+        
+                </tr>
+        
+            </tbody>
+        
+        </table>
+        <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+
+
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+
+
+<footer>
+    <div class="row">
+        <div class="col-sm-3">
+            <span >
+                <img src="https://material.angular.io/assets/img/homepage/angular-white-transparent.svg" width="50px"/>
+            </span>
+            <span class="footer-col1">
+                Learn Angular
+            </span>
+        </div>
+        <div class="col-sm-3">
+            <span>
+                <img src="https://material.angular.io/assets/img/angular-material-logo.svg" width="40px"/>
+            </span>
+            <span class="footer-col2">
+                Current Version 11.2.2
+            </span>
+
+        </div>
+        <div class="col-sm-3 footer-col3">
+            <h1>Powered by Google ©2010-2020.</h1>
+            <h1>Code licensed under an MIT-style License.</h1>
+            <h1>Documentation licensed under CC BY 4.0.</h1>
+        </div>
+      </div>
+</footer>

@@ -1,0 +1,30 @@
+import { EmpName } from "./emp-name";
+export interface Home {
+    id?:number,
+    companyName:string,
+    address:string,
+    email:string,
+    phoneNumber:string,
+    empInfo:[
+        {
+        empName:string,
+        designation:string,
+        joinDate:string,
+        email1:string,
+        phoneNumber1:string,
+        skillInfo:[
+            {
+                skillName:string,
+                skillRating:string
+            }
+        ],
+        eductionInfo:[
+            {
+                instituteName:string,
+                courseName:string,
+                completedYear:string
+            }
+        ]
+    }
+       ]
+    }

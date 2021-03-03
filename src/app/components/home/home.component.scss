@@ -1,0 +1,226 @@
+//navbar
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.addBtn{
+    width: 40%;
+    margin: 7%;
+    color: darkslateblue;
+}
+.sticky-nav {
+    background: #3f51b5;
+}
+.sticky-box-shadow {
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+  width: 100%;
+  background:#3f51b5;
+  color:#3f51b5;
+}
+body{
+    font-family: montserrat;
+}
+header{
+    box-shadow: 1px 15px 5px black;
+
+}
+.nav-bar{
+    position: relative;
+
+    background: #3f51b5;
+    height: 60px;
+    width: 100%;
+}
+label.logo{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 70px;
+    margin-top: 5px;
+      
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+    margin-top: 15px;
+
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    // line-height: 60;
+}
+.nav-par{
+    color: white;
+}
+nav a{
+    font-size: 18px;
+    // border: 1px solid transparent;
+    padding:7px 10px;
+    // border-radius: 3px;
+}
+a:hover{
+    border: 1px solid rgb(15, 25, 117);
+    transition: .5s;
+
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 60px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media(max-width:1048px){
+    label.logo{
+        padding-left: 40px;
+    }
+    nav ul{
+        margin-right: 20;
+    }
+    nav a{
+        font-size: 17;
+    }
+}
+@media(max-width:909px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#3f51b5;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        margin-right: 20;
+        left: -100%;
+        transition: all .5s;
+    }
+    nav li{
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20;
+    }
+    a:hover{
+        border: none;
+        color: #3498db;
+    }
+    nav ul.show{
+        left: 0;
+    }
+    .footer-col3{
+        color: white;
+        text-align: center;
+        
+        
+    }
+}
+.hhh-div{
+    width: 100%;
+    border: 1px solid black;
+    height: 1px;
+   
+
+}
+
+//section
+section{
+    background: #3f51b5;
+    background-size: cover;
+    height: calc(70vh - 80px);
+
+}
+section h1{
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 100px;
+
+}
+section p{
+    font-size: 15px;
+    padding-top: 50px;
+
+
+}
+section h1,p{
+    color: white;
+    text-align: center;
+}
+// .card:hover {
+//     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+//   }
+ //footer 
+  .container {
+    padding: 2px 16px;
+    margin-left: 10px;
+  }
+  footer{
+      background: #3f51b5;
+      text-align: center;
+  }
+.footer-col1{
+      color: white;
+      margin-left: 20px;
+      
+  }
+.footer-col2{
+    color: white;
+    margin-left: 20px;
+    
+}
+footer div{
+    margin-left: 10px;
+}
+.footer-col3{
+    color: white;
+    
+}
+footer h1{
+    font-size: 9px;
+
+}
+.inputText{
+    width: 60%;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 50px;
+    height: 30px;
+
+}
+//card data
+.text-center{
+    width: 1000px;
+    margin: 20px;
+    margin-left: 300px;
+}
+.card-name{
+    margin-top: 100px;
+    background: lightgray;
+    font-size: 18px;
+    padding: 20px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card-info{
+      padding: 5px;
+
+  }
